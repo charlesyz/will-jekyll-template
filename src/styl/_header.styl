@@ -4,8 +4,13 @@ body
 
 
 $bg
-	background main
 	height 100%
+	width 100%
+	box-shadow inset 0px 0px 40vmin 40vmin rgba(0,0,0,0.6)
+	background-repeat no-repeat
+	background-size cover
+	background-color main
+	background-position center center
 	.content
 		width 95%
 		align(both)
@@ -17,20 +22,25 @@ $bg
 	h1,h2
 		color: sec
 		text-align center
+	a
+		color white
+		text-decoration none
+		&:hover
+			color main
 	.site-title
-		font-size rem(60px)
-		line-height 1
 		margin-top -80px
-		display block
+		font-size rem(30px)
+		line-height 1
+		text-decoration none
 		+above(cut)
 			margin-bottom 0
-			font-size rem(100px)
+			font-size rem(80px)
 	.site-description
-		font-size rem(20px)
+		font-size rem(10px)
 		display block
 		margin rem(30px) 0
 		+above(cut)
-			font-size rem(40px)
+			font-size rem(20px)
 
 // Header Post
 .header-post
@@ -57,6 +67,28 @@ $bg
 		margin 0 0 30px
 		+above(cut)
 			font-size rem(60px)
+	.subtitle
+		mainFont(300)
+		font-size rem(20px)
+	h1,.subtitle, .date
+		color sec
+		text-align center
+	p
+		color sec
+		text-decoration none
+		mainFont(300)
+		font-size rem(18px)
+
+
+// Header Minimal
+.header-minimal
+	background-color main
+	width: 100%
+	height: 225px
+	.content
+		padding-top: 50px
+		width 95%
+		text-align center
 	.subtitle
 		mainFont(300)
 		font-size rem(20px)
