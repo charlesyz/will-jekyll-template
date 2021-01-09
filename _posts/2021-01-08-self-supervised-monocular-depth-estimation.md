@@ -14,8 +14,6 @@ categories:
 - Computer Vision
 ---
 
-## Background
-
 In October of 2020, I learned of strategy to use monocular depth estimation as a cheaper low-accuracy alternative to LIDAR. Essentially, you can use a camera and a self-supervised monocular depth estimation network to produce colour images with depth information ([RGBD images](http://www.open3d.org/docs/latest/tutorial/Basic/rgbd_image.html)). Since we know camera's exact position and orientation, each pixel in the RGBD image can be projected into 3d to form a pseudo-pointcloud with RGB+XY information. This is similar to how the [Xbox Kinect](https://en.wikipedia.org/wiki/Kinect) obtains 3d information, though the Kinect uses infrared sensors to gauge depth instead of a RGBD image. With this pseudo-pointcloud, we can use Simultaneous Localization and Mapping (SLAM) or Occupancy Grid algorithms to produce a 3d map of our environment with colour information. 
 
 ![RGBD mapping with the XBOX Kinect](https://www-cse-managed-files.s3.amazonaws.com/research_projects/map_full_overview_1-320.jpg)
